@@ -2,9 +2,9 @@ import React from "react";
 
 const GifCard = ({ gif }) => {
 	return (
-		<div>
+		<div className="card">
 			<p>{gif.title}</p>
-			<img src={gif.images.original.url} alt={gif.title} />
+			<img className="photo" src={gif.images.original.url} alt={gif.title} />
 		</div>
 	);
 };

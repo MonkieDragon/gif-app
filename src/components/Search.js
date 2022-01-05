@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Button from "@mui/material/Button";
+import TextField from "@mui/material/TextField";
 
 const Search = ({ setSearchTerm }) => {
 	const [newSearch, setNewSearch] = useState("");
@@ -19,8 +21,15 @@ const Search = ({ setSearchTerm }) => {
 	return (
 		<section>
 			<form onSubmit={handleSubmit}>
-				<input type="text" onChange={handleChange} value={newSearch}></input>
-				<button>Submit</button>
+				<TextField
+					id="outlined-basic"
+					label="Search"
+					variant="outlined"
+					onChange={handleChange}
+					value={newSearch}
+				/>
+
+				<Button variant="contained">Submit</Button>
 			</form>
 		</section>
 	);

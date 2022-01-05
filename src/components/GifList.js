@@ -45,7 +45,7 @@ const GifList = ({ searchTerm }) => {
 	}, [searchTerm]);
 
 	return (
-		<section>
+		<section className="giflist">
 			{isError ? (
 				<p>Error</p>
 			) : (
@@ -55,7 +55,7 @@ const GifList = ({ searchTerm }) => {
 					) : (
 						<div>
 							<p>{searchTerm} gifs</p>
-							<ul>
+							<ul className="wrapper">
 								{gifs.map((gif) => {
 									return (
 										<div key={gif.id}>
